@@ -8,5 +8,10 @@ pipeline {
         }
        } 
       }
+  post {
+    always {
+      archiveArtifacts artifacts: 'dist/*jar'
+    }
+  }
 }
       
